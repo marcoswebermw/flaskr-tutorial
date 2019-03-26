@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  web:
+    build: .
+    container_name: flaskr 
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+    entrypoint: flask run --host=0.0.0.0
